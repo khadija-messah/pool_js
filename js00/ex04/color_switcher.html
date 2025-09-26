@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <header>
+
+    </header>
+    <body style="background-color: blue;">
+        <button onclick="print()">Change Color</button>
+    </body>
+    <script>
+        function print()
+        {
+            let color = '#';
+            const hexChars = '0123456789ABCDEF';
+            for (let i = 0; i < 6; i++) {
+                color += hexChars[Math.floor(Math.random() * 16)];
+            }
+            document.body.style.background = color
+        }
+    </script>
+</html>
