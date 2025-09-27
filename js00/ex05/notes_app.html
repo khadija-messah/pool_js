@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0;">
+    <header>
+
+    </header>
+    <body>
+        <p style=" background-color: cadetblue; color: azure;  margin-left: 600px; margin-right: 600px; padding-left: 100px; margin-top: 200px;">My Note</p>
+        <div style=" margin-top: 30px; margin-left: 500px; margin-right: 500px; height: 500px;">
+            <form>
+                <textarea id="note" style=" background-color: width; width: 100%; height: 200px;resize: none;" ></textarea>
+            </form>
+            <button onclick="print()">save</button>
+         </div>
+         <script>
+            window.onload = ()=>{
+
+                document.getElementById("note").value = localStorage.getItem("note")
+            }
+            function print()
+            {
+                localStorage.setItem("note",document.getElementById("note").value)
+            }
+         </script>
+          
+    </body>
+</html>
